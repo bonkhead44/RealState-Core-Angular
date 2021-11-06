@@ -11,6 +11,6 @@ namespace RealStateAPI.Data.Repo
         Task<IEnumerable<City>> GetCities();
         void AddCity(City city);
         void DeleteCity(int cityId);
-        Task<bool> SaveChanges();
+        Task<City> GetCityById(int cityId);
     }
 }

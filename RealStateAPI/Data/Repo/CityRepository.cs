@@ -30,9 +30,9 @@ namespace RealStateAPI.Data.Repo
             return await _db.Cities.ToListAsync();
         }
 
-        public async Task<bool> SaveChanges()
+        public async Task<City> GetCityById(int cityId)
         {
-            return await _db.SaveChangesAsync() > 0;
+            return await _db.Cities.FindAsync(cityId);
         }
     }
 }
